@@ -9,3 +9,9 @@ def convert_mile_to_km(miles):
 
 
 # Main
+window = tk.Tk()
+window.title("Mile to Km Converter")
+window.minsize(width=300, height=50)
+
+
+window.mainloop()
