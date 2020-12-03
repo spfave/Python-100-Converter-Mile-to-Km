@@ -19,7 +19,7 @@ def convert_mile_to_km(miles):
 
 def button_click():
     """ Get mileage entry and convert to kilometers """
-    miles = float(mile_entry.get())
+    miles = float(input_miles.get())
     kilometers = convert_mile_to_km(miles)
     label_km_calc.config(text=str(kilometers))
 
@@ -30,9 +30,9 @@ window.title("Mile to Km Converter")
 window.minsize(width=300, height=50)
 window.config(padx=10, pady=10)
 
-# Mile entry
-mile_entry = tk.Entry(width=col1_width)
-mile_entry.grid(row=0, column=1)
+# Entry
+input_miles = tk.Entry(width=col1_width)
+input_miles.grid(row=0, column=1)
 
 # Labels
 label_miles = tk.Label(text="Miles", anchor="w", width=col2_width)
@@ -48,8 +48,8 @@ label_km = tk.Label(text="Kilometers", anchor="w", width=col2_width)
 label_km.grid(row=1, column=2)
 
 # Button
-convert_button = tk.Button(
+button_convert = tk.Button(
     text="Convert", width=col1_width, command=button_click)
-convert_button.grid(row=2, column=1)
+button_convert.grid(row=2, column=1)
 
 window.mainloop()
