@@ -1,6 +1,14 @@
 import tkinter as tk
 
 
+# Constants
+col0_width = 10
+col2_width = 10
+
+# Variables
+kilometers = 0
+
+
 # Functions
 def convert_mile_to_km(miles):
     """ Convert input miles to kilometers and return """
@@ -12,6 +20,24 @@ def convert_mile_to_km(miles):
 window = tk.Tk()
 window.title("Mile to Km Converter")
 window.minsize(width=300, height=50)
+window.config(padx=10, pady=10)
+
+# Mile entry
+mile_entry = tk.Entry()
+mile_entry.grid(row=0, column=1)
+
+# Labels
+label_miles = tk.Label(text="Miles", anchor="w", width=col2_width)
+label_miles.grid(row=0, column=2)
+
+label_conv_equal = tk.Label(text="is equal to", anchor="e", width=col0_width)
+label_conv_equal.grid(row=1, column=0)
+
+label_km_calc = tk.Label(text=kilometers)
+label_km_calc.grid(row=1, column=1)
+
+label_km = tk.Label(text="Kilometers", anchor="w", width=col2_width)
+label_km.grid(row=1, column=2)
 
 
 window.mainloop()
